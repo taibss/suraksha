@@ -21,9 +21,13 @@ import IntakeForm from './components/IntakeForm';
 import CityWatch from './components/CityWatch';
 import ResourcesPage from './components/ResourcesPage';
 import AboutPage from './components/AboutPage';
+import Chatbot from './components/Chatbot';
+import FloatingChatbot from './components/FloatingChatbot';
 import { CROOKS, TESTIMONIALS, TICKER_ITEMS } from './data/data';
 import DecisionTreePage from './components/DecisionTreePage';
 import './App.css';
+import './components/Chatbot.css';
+import './components/FloatingChatbot.css';
 import surakshaLogo from '../suraksha_logo.jpeg';
 
 const App: React.FC = () => {
@@ -117,6 +121,14 @@ const App: React.FC = () => {
 
       case 'decision-tree':
         return <DecisionTreePage />;
+
+      case 'chatbot':
+        return (
+          <section className="wrap" style={{ padding: '48px 24px' }}>
+            <Chatbot />
+          </section>
+        );
+
       default:
         return null;
     }
@@ -144,6 +156,7 @@ const App: React.FC = () => {
             {renderPage()}
           </main>
           <Footer onNavigate={handleNavigate} />
+          <FloatingChatbot />
         </>
       )}
     </div>

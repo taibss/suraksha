@@ -1,0 +1,456 @@
+/* Decision Tree Styles - Light Theme */
+.decision-tree {
+  font-family: var(--sans), "Mukta", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: calc(100vh - 100px);
+  padding: 2rem 0;
+}
+
+:root {
+  --bg: #fdf7ee;
+  --panel: #fff;
+  --panel2: #fff;
+  --text: #221d3a;
+  --muted: #8b85a3;
+  --line: #e0ddd7;
+  --accent: #4b51a0;
+  --accent-bg: rgba(75, 81, 160, 0.1);
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --cream: #fdf7ee;
+  --peach: #fff1e6;
+  --sky: #e9f7f3;
+  --blush: #ffe9ec;
+  --paper-2: #f3eee3;
+  --ink: #221d3a;
+  --ink-soft: #544d72;
+  --white: #fff;
+  --card: #fff;
+  --navy: #221d3a;
+  --sans: "Mukta", system-ui, sans-serif;
+  --serif: "Fraunces", Georgia, serif;
+  --round: "Baloo 2", var(--sans);
+  --shadow: 0 22px 50px -24px rgba(27,33,80,.42);
+  --shadow-sm: 0 12px 30px -18px rgba(27,33,80,.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.decision-tree .wrap {
+  max-width: var(--maxw, 1180px);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.decision-tree .grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.decision-tree .sidebar,
+.decision-tree .main {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.decision-tree .main {
+  min-height: 500px;
+}
+
+.decision-tree .search {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-family: var(--sans);
+}
+
+.decision-tree .search:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.decision-tree .door,
+.decision-tree .nodebtn,
+.decision-tree .leafbtn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 0.8rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+
+.decision-tree .door:hover,
+.decision-tree .nodebtn:hover,
+.decision-tree .leafbtn:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.decision-tree .door.active {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.decision-tree .small {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-family: var(--sans);
+}
+
+.decision-tree .pill {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  margin: 0.4rem 0.5rem 0.4rem 0;
+  color: var(--accent);
+  background: var(--accent-bg);
+  font-size: 0.8rem;
+  font-family: var(--sans);
+}
+
+.decision-tree .breadcrumb {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-family: var(--sans);
+}
+
+.decision-tree .options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.decision-tree .card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.decision-tree .leaf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.decision-tree h2 {
+  font-size: 2.2rem;
+  margin: 0.8rem 0;
+  font-family: var(--serif);
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.decision-tree h3 {
+  margin: 0.8rem 0 1.2rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.4rem;
+}
+
+.decision-tree ul,
+.decision-tree ol {
+  padding-left: 1.5rem;
+}
+
+.decision-tree li {
+  margin: 0.6rem 0;
+  font-family: var(--sans);
+}
+
+.decision-tree .ai {
+  border: 1px dashed var(--accent);
+  background: var(--accent-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.decision-tree .ai h3 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.decision-tree textarea {
+  width: 100%;
+  min-height: 100px;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  margin-top: 1rem;
+}
+
+.decision-tree textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.decision-tree .toprow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+.decision-tree .action {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.decision-tree .action:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.decision-tree .secondary {
+  background: var(--peach);
+  color: var(--ink);
+}
+
+.decision-tree .secondary:hover {
+  background: #ffe5d6;
+}
+
+.decision-tree .kpi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.decision-tree .kpi div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.decision-tree .kpi div b {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.decision-tree .kpi div span {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.decision-tree .scamradar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.decision-tree .scam {
+  border-left: 4px solid var(--warn);
+  background: var(--blush);
+}
+
+.decision-tree .scam b {
+  color: var(--danger);
+  font-family: var(--serif);
+}
+
+.decision-tree .scam p {
+  color: var(--ink-soft);
+  font-family: var(--sans);
+}
+
+.decision-tree pre {
+  white-space: pre-wrap;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  padding: 1.2rem;
+  border-radius: 16px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.decision-tree .footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  font-family: var(--sans);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .decision-tree .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .decision-tree .leaf-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .decision-tree .kpi {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .decision-tree .options {
+    grid-template-columns: 1fr;
+  }
+  
+  .decision-tree .scamradar {
+    grid-template-columns: 1fr;
+  }
+  
+  .decision-tree .toprow {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .decision-tree .kpi {
+    grid-template-columns: 1fr;
+  }
+  
+  .decision-tree h2 {
+    font-size: 1.8rem;
+  }
+  
+  .decision-tree .card {
+    padding: 1.2rem;
+  }
+}
+
+/* Navigation styles */
+.decision-tree .breadcrumb {
+  margin-bottom: 1rem;
+  font-family: var(--sans);
+}
+
+/* Checkbox styling */
+.decision-tree input[type="checkbox"] {
+  margin-right: 0.8rem;
+  transform: scale(1.2);
+}
+
+/* Button hover effects */
+.decision-tree .action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(75, 81, 160, 0.3);
+}
+
+.decision-tree .secondary:hover {
+  background: #ffe5d6;
+  transform: translateY(-1px);
+}
+
+/* Animation for smooth transitions */
+.decision-tree .door,
+.decision-tree .nodebtn,
+.decision-tree .leafbtn {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.decision-tree .door:hover,
+.decision-tree .nodebtn:hover,
+.decision-tree .leafbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 33, 80, 0.15);
+}
+
+/* Active state for doors */
+.decision-tree .door.active {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+/* Loading states */
+.decision-tree .loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Focus states for accessibility */
+.decision-tree .door:focus,
+.decision-tree .nodebtn:focus,
+.decision-tree .leafbtn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Animation classes */
+.decision-tree .anim {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header styling */
+.decision-tree h1 {
+  font-family: var(--serif);
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.decision-tree h1.hl {
+  color: var(--accent);
+}

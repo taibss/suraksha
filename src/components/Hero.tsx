@@ -1,0 +1,89 @@
+import React from 'react';
+
+interface HeroProps {
+  onNavigate: (page: string) => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
+  return (
+    <section className="hero">
+      <span className="blob" style={{width: "200px", height: "200px", background: "#4b51a0", top: "-40px", left: "-40px"}}></span>
+      <span className="blob" style={{width: "150px", height: "150px", background: "#2cc4a6", bottom: "30px", right: "40%"}}></span>
+      <div className="wrap">
+        <div>
+          <span className="pill anim a1" style={{background: 'rgba(75, 81, 160, 0.2)', backdropFilter: 'blur(10px)', border: '1px solid rgba(75, 81, 160, 0.3)', color: '#4b51a6'}}>🛡️ <span>Trusted by your neighbourhood · Mumbai</span></span>
+          <h1 className="anim a2" style={{color: '#000', padding: '0.4em 0.8em', borderRadius: '8px', display: 'inline-block'}}>
+            Scammers are clever.<br/>
+            <span className="hl">Together, we're cleverer.</span>
+          </h1>
+          <p className="sub anim a3" style={{color: '#544d72', padding: '0.8em 1.6em', borderRadius: '8px', display: 'inline-block'}}>
+            Spot the trick before it reaches you, breathe easy if it already has — and watch the crooks get caught. Suraksha is with you, every step.
+          </p>
+          <div className="cta-row anim a4">
+            <button className="btn btn-gold btn-lg" onClick={() => onNavigate('scams')}>
+              Show me the scams
+            </button>
+            <button className="btn btn-ghost btn-lg" onClick={() => onNavigate('redressal')}>
+              I need help now
+            </button>
+          </div>
+        </div>
+        <div className="hero-art anim a3">
+          <svg viewBox="0 0 440 360" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="220" cy="320" rx="180" ry="26" fill="#000" opacity="0.18"/>
+            <path d="M220 40 360 78v92c0 78-58 112-140 138C138 282 80 248 80 170V78z" fill="#2cc4a6" opacity="0.16"/>
+            <path d="M220 60 340 92v80c0 66-50 96-120 118C150 268 100 238 100 172V92z" fill="none" stroke="#2cc4a6" strokeWidth="3" opacity="0.5" strokeDasharray="6 8"/>
+            {/* elder */}
+            <g transform="translate(120,150)">
+              <rect x="-2" y="60" width="46" height="62" rx="22" fill="#7b6bd6"/>
+              <circle cx="21" cy="40" r="26" fill="#f1c9a5"/>
+              <path d="M-5 38a26 26 0 0 1 52 0z" fill="#dfe3ef"/>
+              <circle cx="13" cy="40" r="3" fill="#33324a"/>
+              <circle cx="29" cy="40" r="3" fill="#33324a"/>
+              <circle cx="11" cy="40" r="7" fill="none" stroke="#33324a" strokeWidth="1.4"/>
+              <circle cx="31" cy="40" r="7" fill="none" stroke="#33324a" strokeWidth="1.4"/>
+              <path d="M18 40h6" stroke="#33324a" strokeWidth="1.4"/>
+              <path d="M13 50q8 6 16 0" stroke="#b06a4a" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+            </g>
+            {/* woman */}
+            <g transform="translate(190,135)">
+              <rect x="0" y="66" width="50" height="68" rx="24" fill="#ff6b6b"/>
+              <circle cx="25" cy="42" r="28" fill="#f0bf95"/>
+              <path d="M-3 40c0-20 14-32 28-32s28 12 28 32c0 8-4 14-6 18l-4-22-6 10-6-12-8 12-6-10-4 22c-2-4-6-10-6-18z" fill="#3a2c4f"/>
+              <circle cx="16" cy="42" r="3.2" fill="#33324a"/>
+              <circle cx="34" cy="42" r="3.2" fill="#33324a"/>
+              <circle cx="13" cy="50" r="3" fill="#ff9d9d" opacity="0.7"/>
+              <circle cx="37" cy="50" r="3" fill="#ff9d9d" opacity="0.7"/>
+              <path d="M17 54q8 7 16 0" stroke="#b0463a" strokeWidth="2.4" fill="none" strokeLinecap="round"/>
+            </g>
+            {/* young */}
+            <g transform="translate(262,150)">
+              <rect x="0" y="60" width="46" height="62" rx="22" fill="#f7b32b"/>
+              <circle cx="23" cy="40" r="26" fill="#e8b48a"/>
+              <path d="M-2 36a25 25 0 0 1 50 0l-2 4H0z" fill="#2a2438"/>
+              <rect x="-3" y="30" width="52" height="10" rx="5" fill="#ff6b6b"/>
+              <circle cx="15" cy="42" r="3.2" fill="#33324a"/>
+              <circle cx="31" cy="42" r="3.2" fill="#33324a"/>
+              <path d="M15 51q8 6 16 0" stroke="#9c6a3e" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+            </g>
+            {/* fleeing crook (comic) */}
+            <g transform="translate(330,210)" opacity="0.96">
+              <g transform="scale(0.8)">
+                <rect x="0" y="34" width="40" height="48" rx="18" fill="#4a4668"/>
+                <circle cx="20" cy="22" r="18" fill="#cdbfae"/>
+                <rect x="3" y="14" width="34" height="11" rx="5" fill="#262238"/>
+                <circle cx="13" cy="20" r="2.4" fill="#fff"/>
+                <circle cx="27" cy="20" r="2.4" fill="#fff"/>
+                <circle cx="13" cy="20" r="1.1" fill="#111"/>
+                <circle cx="27" cy="20" r="1.1" fill="#111"/>
+                <path d="M14 30q6 4 12 0" stroke="#7a5a4a" strokeWidth="2" fill="none"/>
+                <ellipse cx="40" cy="14" rx="9" ry="6" fill="#fff" opacity="0.9"/>
+                <text x="40" y="17" fontSize="9" textAnchor="middle" fill="#1b2150" fontFamily="Baloo 2,sans-serif" fontWeight="700">!</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  );
+};

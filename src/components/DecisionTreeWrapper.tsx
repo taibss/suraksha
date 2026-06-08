@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Header from './Header';
+import { Header } from './Header';
 import DecisionTree from './DecisionTree';
 import './DecisionTreeWrapper.css';
 
 const DecisionTreeWrapper: React.FC = () => {
   const [currentLang, setCurrentLang] = useState('en');
   const [currentPage, setCurrentPage] = useState('home');
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleLanguageChange = (lang: string) => {
     setCurrentLang(lang);
@@ -43,6 +44,8 @@ const DecisionTreeWrapper: React.FC = () => {
         onLanguageChange={handleLanguageChange}
         onNavigate={handleNavigate}
         currentPage={currentPage}
+        darkMode={darkMode}
+        onToggleDark={() => setDarkMode(!darkMode)}
       />
       {renderContent()}
     </div>

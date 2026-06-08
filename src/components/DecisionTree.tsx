@@ -6,8 +6,14 @@ import NodeView from "./NodeView.jsx";
 import LeafView from "./LeafView.jsx";
 import SearchResults from "./SearchResults.jsx";
 
+type ViewState =
+  | { type: "home" }
+  | { type: "node"; node: any }
+  | { type: "leaf"; leafId: string }
+  | { type: "search"; query: string };
+
 const DecisionTree: React.FC = () => {
-  const [view, setView] = useState({ type: "home" });
+  const [view, setView] = useState<ViewState>({ type: "home" });
   const [doorId, setDoorId] = useState<string | null>(null);
   const [path, setPath] = useState<string[]>([]);
   const [search, setSearch] = useState("");
@@ -80,16 +86,16 @@ const DecisionTree: React.FC = () => {
         {view.type === "home" && <Home tree={TREE} />}
         {view.type === "node" && (
           <NodeView
-            node={(view as any).node}
+            node={view.node}
             path={path}
-            onChoose={(i: number) => chooseOption((view as any).node, i)}
+            onChoose={(i: number) => chooseOption(view.node, i)}
             onHome={goHome}
           />
         )}
         {view.type === "leaf" && (
           <LeafView
-            leafId={(view as any).leafId}
-            leaf={(TREE.leaves as any)[(view as any).leafId]}
+            leafId={view.leafId}
+            leaf={(TREE.leaves as any)[view.leafId]}
             path={path}
             onBackOne={goBackOne}
             onHome={goHome}
@@ -98,7 +104,7 @@ const DecisionTree: React.FC = () => {
         {view.type === "search" && (
           <SearchResults
             tree={TREE}
-            query={(view as any).query}
+            query={view.query}
             onOpen={(id: string, title: string) => openLeafFromSearch(id, title)}
           />
         )}

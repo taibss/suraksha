@@ -24,6 +24,7 @@ import AboutPage from './components/AboutPage';
 import { CROOKS, TESTIMONIALS, TICKER_ITEMS } from './data/data';
 import DecisionTreePage from './components/DecisionTreePage';
 import './App.css';
+import surakshaLogo from '../suraksha_logo.jpeg';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -125,7 +126,7 @@ const App: React.FC = () => {
     <div className="App">
       {showLogo && (
         <div className="logo-loading-screen">
-          <img src="../suraksha_logo.jpeg" alt="Suraksha Logo" className="logo-giant" />
+          <img src={surakshaLogo} alt="Suraksha Logo" className="logo-giant" />
         </div>
       )}
       {!showLogo && (

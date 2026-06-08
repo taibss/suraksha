@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import surakshaLogo from '../../suraksha_logo.jpeg';
 
 interface HeaderProps {
   currentLang: string;
@@ -28,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, o
         <div className="wrap">
           <div className="brand" onClick={() => onNavigate('home')}>
             <span id="navshield">
-              <img src="../suraksha_logo.jpeg" alt="Suraksha Logo" style={{ width: '40px', height: '45px' }} />
+              <img src={surakshaLogo} alt="Suraksha Logo" style={{ width: '80px', height: '80px', objectFit: 'contain' }} />
             </span>
             <div>
               <span className="name">Suraksha</span>

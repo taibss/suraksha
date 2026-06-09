@@ -55,9 +55,9 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">The Movement</div>
-          <h2>No one should face a crime alone — or uninformed</h2>
+          <h2>No one should face a crime alone or uninformed</h2>
           <p>
-            Suraksha turns the city's everyday crimes into prevention people can use and a clear path to help. We don't replace the police, the courts or a lawyer — we help you reach them faster, and better prepared.
+            Suraksha turns the city's everyday crimes into prevention people can use and a clear path to help. We don't replace the police, the courts or a lawyer. We help you reach them faster, and better prepared.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <div className="eyebrow">Tier 1</div>
             <h4>Suraksha Fellows</h4>
             <p style={{color: 'var(--ink-soft)'}}>
-              Law students and young graduates working as para-legals — awareness, intake and navigation help. They guide on process, not legal advice, and escalate to advocates when needed.
+              Law students and young graduates working as para-legals awareness, intake and navigation help. They guide on process, not legal advice, and escalate to advocates when needed.
             </p>
           </div>
           
@@ -86,7 +86,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <div className="eyebrow teal">Tier 2</div>
             <h4>The Advocate Panel</h4>
             <p style={{color: 'var(--ink-soft)'}}>
-              Enrolled, identity-verified advocates who give the actual legal guidance — listed neutrally in the directory.
+              Enrolled, identity-verified advocates who give the actual legal guidance ;listed neutrally in the directory.
             </p>
           </div>
         </div>

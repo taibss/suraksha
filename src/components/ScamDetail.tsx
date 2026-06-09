@@ -98,7 +98,7 @@ const ScamDetail: React.FC<ScamDetailProps> = ({ scamId, onNavigate }) => {
           
           <div className="block" style={{marginTop: '22px'}}>
             <h4>
-              <span style={{color: 'var(--gold)'}}>→</span> If it's already happened — breathe, then:
+              <span style={{color: 'var(--gold)'}}>→</span> If it's already happened now breathe, then:
             </h4>
             <ol className="steps">
               <li>
@@ -117,7 +117,7 @@ const ScamDetail: React.FC<ScamDetailProps> = ({ scamId, onNavigate }) => {
                 <b>Step 5</b> Lodge an FIR at the local / cyber police station
               </li>
               <li>
-                <b>Step 6</b> Tell your family — and warn your community group
+                <b>Step 6</b> Tell your family and warn your community group
               </li>
             </ol>
             <div style={{display: 'flex', gap: '12px', marginTop: '18px', flexWrap: 'wrap'}}>
@@ -134,7 +134,7 @@ const ScamDetail: React.FC<ScamDetailProps> = ({ scamId, onNavigate }) => {
         <div className="disclaim">
           <span>ℹ️</span>
           <span>
-            Friendly general info for awareness — not legal advice. For your specific situation, a verified advocate can help.
+            Friendly general info for awareness and not legal advice. For your specific situation, a verified advocate can help.
           </span>
         </div>
       </div>

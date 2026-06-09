@@ -38,7 +38,7 @@ export const SCAMS: Scam[] = [
     targets: ['Young professionals', 'Seniors'],
     title: 'UPI "wrong transfer" trick',
     mugshotVariant: 1,
-    description: 'A stranger sends a "collect request" or claims they paid you by mistake and asks you to return it — draining your account.',
+    description: 'A stranger sends a "collect request" or claims they paid you by mistake and asks you to return it whihc leads to draining your account.',
     howItWorks: 'You get a UPI "request money" notification or a call saying money came to you by error. Approving the request or scanning a QR sends YOUR money out.',
     redFlags: [
       'A "collect request" you didn\'t start.',
@@ -46,7 +46,7 @@ export const SCAMS: Scam[] = [
       'Pressure to act fast before "the bank reverses it".'
     ],
     safetyTips: [
-      'You never need a PIN to RECEIVE money — only to send it.',
+      'You never need a PIN to RECEIVE money and only to send it.',
       'Decline unknown collect requests.',
       'Verify any "wrong transfer" with your bank directly.'
     ]
@@ -58,7 +58,7 @@ export const SCAMS: Scam[] = [
     title: 'Guaranteed-return groups',
     mugshotVariant: 2,
     description: 'A WhatsApp "expert" shows fake profits and a slick app, then blocks withdrawals once you\'ve deposited enough.',
-    howItWorks: 'You\'re added to a group with screenshots of huge gains and a "mentor". A fake app shows your balance rising — until you try to withdraw and are asked for "tax" and "fees".',
+    howItWorks: 'You\'re added to a group with screenshots of huge gains and a "mentor". A fake app shows your balance rising until you try to withdraw and are asked for "tax" and "fees".',
     redFlags: [
       'Guaranteed or unusually high "daily returns".',
       'An app or link outside official app stores.',
@@ -76,7 +76,7 @@ export const SCAMS: Scam[] = [
     targets: ['Young professionals', 'Women'],
     title: 'Work-from-home "task" jobs',
     mugshotVariant: 3,
-    description: 'You\'re paid small amounts for simple tasks, then asked to deposit money for "bigger commissions" — which vanish.',
+    description: 'You\'re paid small amounts for simple tasks, then asked to deposit money for "bigger commissions" which vanish.',
     howItWorks: 'A recruiter offers easy paid tasks. Early small payouts build trust. Then you\'re moved to "prepaid tasks" needing deposits to unlock earnings.',
     redFlags: [
       'Up-front payment to "unlock" tasks or salary.',
@@ -143,7 +143,7 @@ export const SCAMS: Scam[] = [
     safetyTips: [
       'Use only RBI-regulated lenders.',
       'Deny unnecessary app permissions.',
-      'Report harassment — it is a crime; you have rights.'
+      'Report harassment. It is a crime; you have rights.'
     ]
   },
   {

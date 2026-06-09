@@ -20,7 +20,7 @@ const CityWatch: React.FC<CityWatchProps> = ({ onNavigate }) => {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">City Watch</div>
-          <h2>What's going around — so you're a step ahead</h2>
+          <h2>What's going around so you're a step ahead</h2>
           <p>
             A moderated, pattern-level view of the city's scams (we never name individuals). It powers our weekly cards and the quarterly trend report.
           </p>
@@ -100,7 +100,7 @@ const CityWatch: React.FC<CityWatchProps> = ({ onNavigate }) => {
               <div className="eyebrow teal">Quarterly</div>
               <h3 style={{fontSize: '1.3rem', margin: '.3em 0'}}>Mumbai Cyber-Fraud Trend Report</h3>
               <p style={{color: 'var(--ink-soft)', fontSize: '.94rem'}}>
-                The patterns, the hotspots, the money lost — the story behind the headlines.
+                The patterns, the hotspots, the money lost the story behind the headlines.
               </p>
               <button 
                 className="btn btn-out" 

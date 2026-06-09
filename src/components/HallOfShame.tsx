@@ -47,7 +47,7 @@ export const HallOfShame: React.FC<HallOfShameProps> = ({ crooks }) => {
         <div className="sec-head center">
           <div className="eyebrow">Scammers' Hall of Shame</div>
           <h2>Crime doesn't pay. It gets caught. 😎</h2>
-          <p>Every scam ends the same way — with a very nervous crook and a very closed case.</p>
+          <p>Every scam ends the same way: with a very nervous crook and a very closed case.</p>
         </div>
         <div className="crooks">
           {crooks.map((crook, index) => (
@@ -55,7 +55,7 @@ export const HallOfShame: React.FC<HallOfShameProps> = ({ crooks }) => {
           ))}
         </div>
         <p style={{textAlign: "center", color: "#8b90c4", fontSize: "0.8rem", marginTop: "20px"}}>
-          Playful, illustrative cases — but real scammers really do get caught when you report fast.
+          Playful, illustrative cases but real scammers really do get caught when you report fast.
         </p>
       </div>
     </section>

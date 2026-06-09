@@ -28,16 +28,21 @@ export const Reassurance: React.FC = () => {
           </div>
           <div>
             <div className="eyebrow coral">Already been scammed?</div>
-            <h2>First — take a breath. You're not alone.</h2>
+            <h2>First,take a breath. You're not alone.</h2>
             <p>
-              It is not your fault. These are professional criminals, and thousands of smart people fall for the same trick every week. What matters now is acting fast — and you don't have to do it by yourself. Suraksha walks beside you, calmly, the whole way.
+              It is not your fault. These are professional criminals, and thousands of smart people fall for the same trick every week. What matters now is acting fast and you don't have to do it by yourself. Suraksha walks beside you, calmly, the whole way.
             </p>
             <div className="reassure">
               <span>✓ No judgement</span>
               <span>✓ Step-by-step help</span>
               <span>✓ Real people, 24×7</span>
             </div>
-            <button className="btn btn-gold btn-lg">
+            <button className="btn btn-gold btn-lg" style={{
+              background: '#FFC107',
+              color: '#ffffff',
+              border: '1.5px solid #ffffff',
+              boxShadow: '0 8px 18px -8px rgba(165, 7, 7, 0.7)'
+            }}>
               Start here, calmly →
             </button>
           </div>

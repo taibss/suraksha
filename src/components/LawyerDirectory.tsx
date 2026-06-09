@@ -31,7 +31,7 @@ const LawyerDirectory: React.FC<LawyerDirectoryProps> = ({ onNavigate }) => {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow teal">Find Verified Help</div>
-          <h2>Friendly, verified advocates — never ranked</h2>
+          <h2>Friendly, verified advocates never ranked</h2>
         </div>
         
         <div className="notice">

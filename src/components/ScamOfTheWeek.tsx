@@ -22,7 +22,7 @@ export const ScamOfTheWeek: React.FC<ScamOfTheWeekProps> = ({ onNavigate }) => {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">Scam of the Week</div>
-          <h2>This week\'s trick, decoded</h2>
+          <h2>This week's trick, decoded</h2>
         </div>
         <div className="sow">
           <div className="left">

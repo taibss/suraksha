@@ -18,7 +18,7 @@ export const Doorways: React.FC<DoorwaysProps> = ({ onNavigate }) => {
         </svg>
       ),
       title: 'Know the scams',
-      description: 'Spot the patterns and red flags — in friendly, plain language.',
+      description: 'Spot the patterns and red flags in friendly, plain language.',
       cta: 'Browse the library →',
       action: () => onNavigate('scams')
     },
@@ -52,7 +52,7 @@ export const Doorways: React.FC<DoorwaysProps> = ({ onNavigate }) => {
         </svg>
       ),
       title: 'Find verified help',
-      description: 'Friendly, identity-verified advocates. We list — we never push.',
+      description: 'Friendly, identity-verified advocates. We list and we never push.',
       cta: 'Open the directory →',
       action: () => onNavigate('directory')
     }

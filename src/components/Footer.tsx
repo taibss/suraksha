@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             Suraksha · by LawgicHub · powered by Xarka
           </span>
           <span>
-            Prototype with mock data — not a live service. © 2026
+            Prototype with mock data not a live service. © 2026
           </span>
         </div>
       </div>

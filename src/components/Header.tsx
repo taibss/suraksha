@@ -63,7 +63,10 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, o
               </button>
             ))}
           </div>
-          <button className="btn btn-gold nav-cta" onClick={() => onNavigate('decision-tree')} style={{ padding: '10px 20px', fontSize: '16px', fontWeight: 'bold' }}>
+          <button className="btn btn-gold nav-cta" onClick={() => onNavigate('decision-tree')} style={{ background: '#ef4444',
+  color: '#ffffff',
+  border: 'none',
+  boxShadow: '0 8px 18px -8px rgba(239,68,68,0.7)',  padding: '8px 8px', fontSize: '16px', fontWeight: 'bold' }}>
             Get Help
           </button>
         </div>

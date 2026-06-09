@@ -4,11 +4,11 @@ interface HeroProps {
   onNavigate: (page: string) => void;
 }
 
+
+
 export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section className="hero">
-      <span className="blob" style={{width: "200px", height: "200px", background: "#4b51a0", top: "-40px", left: "-40px"}}></span>
-      <span className="blob" style={{width: "150px", height: "150px", background: "#2cc4a6", bottom: "30px", right: "40%"}}></span>
       <div className="wrap">
         <div>
           <span className="pill anim a1" style={{background: 'rgba(75, 81, 160, 0.2)', backdropFilter: 'blur(10px)', border: '1px solid rgba(75, 81, 160, 0.3)', color: '#4b51a6'}}>🛡️ <span>Trusted by your neighbourhood · Mumbai</span></span>
@@ -20,12 +20,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             Spot the trick before it reaches you, breathe easy if it already has — and watch the crooks get caught. Suraksha is with you, every step.
           </p>
           <div className="cta-row anim a4">
-            <button className="btn btn-gold btn-lg" onClick={() => onNavigate('scams')}>
-              Show me the scams
-            </button>
-            <button className="btn btn-ghost btn-lg" onClick={() => onNavigate('redressal')}>
-              I need help now
-            </button>
+<button className="btn btn-ghost btn-lg" onClick={() => onNavigate('scams')} style={{   background: '#F97316',
+  color: '#ffffff',
+  border: '1.5px solid #ffffff' ,
+  boxShadow: '0 8px 18px -8px rgba(165, 7, 7, 0.7)' }}>
+  Show me the scams
+</button>
+<button className="btn btn-ghost btn-lg" onClick={() => onNavigate('redressal')} style={{ color: '#ffffff', border: '1.5px solid #ffffff' }}>
+  I need help now
+</button>
           </div>
         </div>
         <div className="hero-art anim a3">

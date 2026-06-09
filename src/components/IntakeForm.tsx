@@ -32,7 +32,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onNavigate }) => {
       <div className="wrap">
         <div className="sec-head">
           <div className="eyebrow">Suraksha Help</div>
-          <h2>Tell us what happened — we'll take it from here</h2>
+          <h2>Tell us what happened and we'll take it from here</h2>
           <p>
             A friendly Suraksha Fellow will help you navigate reporting and paperwork. Need legal advice? We'll connect you to a verified advocate.
           </p>
@@ -101,7 +101,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onNavigate }) => {
                 onChange={(e) => setConsent(e.target.checked)}
               />
               <label htmlFor="consent" style={{margin: 0, fontWeight: 400}}>
-                I'm okay with Suraksha using these details only to help me. My data is minimised, stored securely in India, and never sold. <b>(Prototype — nothing is actually stored.)</b>
+                I'm okay with Suraksha using these details only to help me. My data is minimised, stored securely in India, and never sold. <b>(Prototype- nothing is actually stored.)</b>
               </label>
             </div>
 
@@ -114,7 +114,7 @@ const IntakeForm: React.FC<IntakeFormProps> = ({ onNavigate }) => {
 
             {formSubmitted && (
               <div className="form-msg" style={{display: 'block', background: 'var(--sky)', color: '#0f6553', borderRadius: '12px', padding: '15px', marginTop: '16px', fontFamily: 'var(--round)', fontWeight: '600'}}>
-                Thanks — in the live service a Suraksha Fellow would reach out within minutes. (Prototype: nothing stored.)
+                Thanks in the live service a Suraksha Fellow would reach out within minutes. (Prototype: nothing stored.)
               </div>
             )}
 

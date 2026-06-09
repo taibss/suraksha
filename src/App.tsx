@@ -135,12 +135,25 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      {showLogo && (
-        <div className="logo-loading-screen">
-          <img src={surakshaLogo} alt="Suraksha Logo" className="logo-giant" />
-        </div>
-      )}
+  <div className="App" style={{
+    position: 'relative',
+    minHeight: '100vh',
+  }}>
+    <div style={{
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: '600px',
+      height: '600px',
+      backgroundImage: 'url(/suraksha_logo.jpeg)',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      opacity: darkMode ? '0.04' : '0.06',
+      zIndex: 0,
+      pointerEvents: 'none',
+    }} />
       {!showLogo && (
         <>
           {showAlert && <Alert onClose={handleCloseAlert} />}

@@ -22,9 +22,9 @@ export interface Testimonial {
 
 export const TESTIMONIALS: Testimonial[] = [
   { quote: 'I almost sent ₹40,000 for a "task job". A Suraksha card my cousin forwarded stopped me just in time.', name: 'Priya, 24', role: 'Marketing exec, Andheri', variant: 0, stars: 5 },
-  { quote: 'They had me on a "police" video call for an hour. My son showed me the Suraksha guide — we hung up and reported. The bank froze it.', name: 'Mr. Rao, 67', role: 'Retired teacher, Powai', variant: 1, stars: 5 },
+  { quote: 'They had me on a "police" video call for an hour. My son showed me the Suraksha guide. We hung up and reported. The bank froze it.', name: 'Mr. Rao, 67', role: 'Retired teacher, Powai', variant: 1, stars: 5 },
   { quote: 'I felt ashamed to report harassment. A Suraksha Fellow sat with me, no judgement, and helped me file everything.', name: 'Anita, 31', role: 'Nurse, Dadar', variant: 3, stars: 5 },
-  { quote: 'As a law student, this is the best training I could ask for — real cases, real people, real impact.', name: 'Kabir', role: 'Suraksha Fellow, GLC Mumbai', variant: 4, stars: 5 },
+  { quote: 'As a law student, this is the best training I could ask for. Real cases, real people, real impact.', name: 'Kabir', role: 'Suraksha Fellow, GLC Mumbai', variant: 4, stars: 5 },
   { quote: 'A transparent network where I\'m listed neutrally and never asked for a cut. That\'s why I joined.', name: 'Adv. Mehta', role: 'Advocate Panel', variant: 2, stars: 5 },
   { quote: 'Every Sunday I forward the Scam of the Week to our society group. Touchwood, no one\'s been caught since.', name: 'Mrs. D\'Souza', role: 'RWA Secretary, Bandra', variant: 5, stars: 5 },
 ];
@@ -75,8 +75,8 @@ export interface Resource {
 export const RESOURCES: Resource[] = [
   { type: 'Scam of the Week', className: '', title: 'The "Digital Arrest" call', description: 'A one-card explainer for the family group.' },
   { type: 'Video · 75s', className: 'c', title: 'UPI fraud, explained in Marathi', description: 'Why you never share a PIN to receive money.' },
-  { type: 'Deep-dive', className: 't', title: 'Investment scams: the full playbook', description: 'How fake trading apps work — and your redressal path.' },
-  { type: 'Video · 60s', className: 'c', title: 'AI voice-cloning — protect your parents', description: 'Set a family safe word today.' },
+  { type: 'Deep-dive', className: 't', title: 'Investment scams: the full playbook', description: 'How fake trading apps work and your redressal path.' },
+  { type: 'Video · 60s', className: 'c', title: 'AI voice-cloning , protect your parents', description: 'Set a family safe word today.' },
   { type: 'Trend report', className: 'a', title: 'Q1 Mumbai Cyber-Fraud Report', description: 'Patterns, hotspots and the money lost.' },
   { type: 'Scam of the Week', className: '', title: 'Courier "customs" scam', description: 'No parcel makes you a criminal. Here\'s the script.' },
 ];
@@ -84,8 +84,8 @@ export const RESOURCES: Resource[] = [
 export const TICKER_ITEMS = [
   'Senior avoids ₹14L after spotting fake CBI call',
   'UPI "collect request" frauds rising citywide',
-  'Job-task scam group busted — 4 arrested',
-  'AI voice-clone calls target elderly parents',
+  'Job task scam group busted — 4 arrested',
+  'AI voice clone calls target elderly parents',
   'Loan-app harassment up in Thane',
   '"Electricity bill" SMS spreading in Chembur'
 ];
@@ -118,5 +118,5 @@ export const STEPS = [
   'Call your bank to freeze the account & block transfers',
   'Note down all numbers, screenshots & transaction IDs',
   'Lodge an FIR at the local / cyber police station',
-  'Tell your family — and warn your community group'
+  'Tell your family and warn your community group'
 ];

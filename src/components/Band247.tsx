@@ -9,7 +9,7 @@ export const Band247: React.FC = () => {
             <span className="badge247">● Always on · 24×7</span>
             <h2>Real people. Any hour.</h2>
             <p>
-              Verified advocates and trained Suraksha Fellows, ready when you need them — whether it's 2pm or 2am. Friendly, patient, and on your side.
+              Verified advocates and trained Suraksha Fellows, ready when you need them. Whether it's 2pm or 2am. Friendly, patient, and on your side.
             </p>
             <button className="btn btn-teal btn-lg" style={{marginTop: "16px"}}>
               Meet the helpers →

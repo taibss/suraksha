@@ -21,7 +21,7 @@ const Redressal: React.FC<RedressalProps> = ({ onNavigate }) => {
     'Call your bank to freeze the account & block transfers',
     'Note down all numbers, screenshots & transaction IDs',
     'Lodge an FIR at the local / cyber police station',
-    'Tell your family — and warn your community group'
+    'Tell your family and warn your community group'
   ];
 
   return (
@@ -45,7 +45,7 @@ const Redressal: React.FC<RedressalProps> = ({ onNavigate }) => {
           <div>
             <b style={{fontSize: '1.12rem', fontFamily: 'Baloo 2,sans-serif'}}>Speed is your superpower.</b>
             <div style={{color: 'var(--ink-soft)'}}>
-              The sooner a transfer is reported, the better the chance of freezing the money. Report first — tidy up the details after.
+              The sooner a transfer is reported, the better the chance of freezing the money. Report first  tidy up the details after.
             </div>
           </div>
         </div>

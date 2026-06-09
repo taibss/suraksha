@@ -28,7 +28,7 @@ import DecisionTreePage from './components/DecisionTreePage';
 import './App.css';
 import './components/Chatbot.css';
 import './components/FloatingChatbot.css';
-import surakshaLogo from '../suraksha_logo.jpeg';
+
 
 const App: React.FC = () => {
   const navigate = useNavigate();
@@ -85,6 +85,9 @@ const App: React.FC = () => {
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
+      width: '700px',
+      height: '700px',
+      backgroundImage: darkMode ? 'url(/darkmode-suraksha-logo-2.0.jpg)' : 'url(/suraksha_logo.jpeg)',
       width: '700px',
       height: '700px',
       backgroundImage: 'url(/suraksha_logo.jpeg)',

@@ -2229,6 +2229,10 @@ body.light .nav-cta {
   color: #4a3206 !important;
 }
 
+body.light .sow .left .week {
+  color: #4a3206 !important;
+}
+
 body.dark .bubble {
   background: #1e2d3d !important;
   color: #eef5ff !important;
@@ -2330,4 +2334,28 @@ body.light .hero .btn-ghost {
 body.light .calm .btn-out {
   color: #221d3a !important;
   border-color: #221d3a !important;
+}
+
+@media(max-width: 880px) {
+  body.light .burger span {
+    background: #221d3a !important;
+  }
+
+  body.light nav.links.open {
+    background: #ffffff !important;
+    border-top: 1px solid #ddd !important;
+    box-shadow: 0 16px 30px -24px rgba(27, 33, 80, 0.45);
+  }
+
+  body.light nav.links.open a {
+    color: #221d3a !important;
+  }
+
+  body.light nav.links.open a:hover {
+    background: rgba(27, 33, 80, 0.08) !important;
+  }
+
+  body.light .lang.open {
+    background: #ffffff !important;
+  }
 }

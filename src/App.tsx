@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Alert } from './components/Alert';
 import { Hero } from './components/Hero';
@@ -31,7 +31,7 @@ import './components/FloatingChatbot.css';
 import surakshaLogo from '../suraksha_logo.jpeg';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const navigate = useNavigate();
   const [currentLang, setCurrentLang] = useState('en');
   const [showAlert, setShowAlert] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
@@ -42,9 +42,9 @@ const App: React.FC = () => {
 
   // Handle navigation
   const handleNavigate = (page: string) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  };
+  navigate('/' + page);
+  window.scrollTo({ top: 0, behavior: 'instant' });
+};
 
   // Handle language change
   const handleLanguageChange = (lang: string) => {
@@ -75,65 +75,6 @@ const App: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Render current page
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return (
-          <>
-            <Hero onNavigate={handleNavigate} />
-            <Stats />
-            <Doorways onNavigate={handleNavigate} />
-            <Protection />
-            <ScamOfTheWeek onNavigate={handleNavigate} />
-            <HallOfShame crooks={CROOKS} />
-            <Reassurance />
-            <Band247 />
-            <Testimonials testimonials={TESTIMONIALS} />
-            <SpreadWord onNavigate={handleNavigate} />
-          </>
-        );
-      
-      case 'scams':
-        return <ScamLibrary onNavigate={handleNavigate} />;
-      
-      case 'detail':
-        // For demo, using the first scam
-        return <ScamDetail scamId="digital-arrest" onNavigate={handleNavigate} />;
-      
-      case 'redressal':
-        return <Redressal onNavigate={handleNavigate} />;
-      
-      case 'directory':
-        return <LawyerDirectory onNavigate={handleNavigate} />;
-      
-      case 'intake':
-        return <IntakeForm onNavigate={handleNavigate} />;
-      
-      case 'city':
-        return <CityWatch onNavigate={handleNavigate} />;
-      
-      case 'resources':
-        return <ResourcesPage onNavigate={handleNavigate} />;
-      
-      case 'about':
-        return <AboutPage onNavigate={handleNavigate} />;
-
-      case 'decision-tree':
-        return <DecisionTreePage />;
-
-      case 'chatbot':
-        return (
-          <section className="wrap" style={{ padding: '48px 24px' }}>
-            <Chatbot />
-          </section>
-        );
-
-      default:
-        return null;
-    }
-  };
-
   return (
   <div className="App" style={{
     position: 'relative',
@@ -144,8 +85,8 @@ const App: React.FC = () => {
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
-      width: '600px',
-      height: '600px',
+      width: '700px',
+      height: '700px',
       backgroundImage: 'url(/suraksha_logo.jpeg)',
       backgroundSize: 'contain',
       backgroundRepeat: 'no-repeat',
@@ -161,15 +102,25 @@ const App: React.FC = () => {
   currentLang={currentLang}
   onLanguageChange={handleLanguageChange}
   onNavigate={handleNavigate}
-  currentPage={currentPage}
+  currentPage=""
   darkMode={darkMode}
   onToggleDark={() => setDarkMode(!darkMode)}
 />
-          <main>
-            {renderPage()}
-          </main>
-          <Footer onNavigate={handleNavigate} />
-          <FloatingChatbot />
+        <main>
+  <Routes>
+    <Route path="/" element={<><Hero onNavigate={handleNavigate}/><Stats /><Doorways onNavigate={handleNavigate} /><Protection /><ScamOfTheWeek onNavigate={handleNavigate} /><HallOfShame crooks={CROOKS} /><Reassurance /><Band247 /><Testimonials testimonials={TESTIMONIALS} /><SpreadWord onNavigate={handleNavigate} /></>} />
+    <Route path="/scams" element={<ScamLibrary onNavigate={handleNavigate} />} />
+    <Route path="/redressal" element={<Redressal onNavigate={handleNavigate} />} />
+    <Route path="/directory" element={<LawyerDirectory onNavigate={handleNavigate} />} />
+    <Route path="/intake" element={<IntakeForm onNavigate={handleNavigate} />} />
+    <Route path="/city" element={<CityWatch onNavigate={handleNavigate} />} />
+    <Route path="/resources" element={<ResourcesPage onNavigate={handleNavigate} />} />
+    <Route path="/about" element={<AboutPage onNavigate={handleNavigate} />} />
+    <Route path="/decision-tree" element={<DecisionTreePage />} />
+  </Routes>
+</main>
+<Footer onNavigate={handleNavigate} />
+<FloatingChatbot />
         </>
       )}
     </div>

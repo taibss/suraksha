@@ -17,10 +17,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <span className="hl">Together, we're cleverer.</span>
           </h1>
           <p className="sub anim a3" style={{color: '#544d72', padding: '0.8em 1.6em', borderRadius: '8px', display: 'inline-block'}}>
-            Spot the trick before it reaches you, breathe easy if it already has then watch the crooks get caught. Suraksha is with you, every step.
+            Spot the trick before it reaches you, breathe easy if it already has and watch the crooks get caught. Suraksha is with you, every step.
           </p>
           <div className="cta-row anim a4">
-<button className="btn btn-gold btn-lg" onClick={() => onNavigate('scams')} style={{   background: '#F97316',
+<button className="btn btn-ghost btn-lg" onClick={() => onNavigate('scams')} style={{   background: '#16bc13',
   color: '#ffffff',
   border: '1.5px solid #ffffff' ,
   boxShadow: '0 8px 18px -8px rgba(165, 7, 7, 0.7)' }}>

@@ -202,6 +202,12 @@ a {
 }
 
 /* Alert */
+.app-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .alert {
   background: linear-gradient(90deg,var(--gold),#ffc658);
   color: #4a3206;
@@ -237,6 +243,15 @@ a {
   font-size: 1rem;
 }
 
+body.dark .alert,
+body.dark .alert span,
+body.dark .alert b,
+body.light .alert,
+body.light .alert span,
+body.light .alert b {
+  color: #4a3206 !important;
+}
+
 @keyframes pulse {
   70% { box-shadow: 0 0 0 9px rgba(74,50,6,0); }
   100% { box-shadow: 0 0 0 0 rgba(74,50,6,0); }
@@ -244,9 +259,8 @@ a {
 
 /* Navigation */
 header.nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
+  z-index: 1;
   background: rgba(27,33,80,.5);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(27,33,80,.2);
@@ -264,6 +278,23 @@ header.nav {
   align-items: center;
   gap: 11px;
   cursor: pointer;
+  flex: 0 0 auto;
+  min-width: 188px;
+}
+
+#navshield {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+}
+
+.brand-logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
 }
 
 .brand .name {
@@ -290,6 +321,8 @@ nav.links {
   gap: 2px;
   margin-left: auto;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
 }
 
 nav.links a {

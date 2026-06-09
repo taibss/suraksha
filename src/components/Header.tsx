@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ currentLang, onLanguageChange, o
         <div className="wrap">
           <div className="brand" onClick={() => onNavigate('home')}>
             <span id="navshield">
-              <img src={darkMode ? "/darkmode-suraksha-logo-2.0.jpg" : "/suraksha_logo.jpeg"} alt="Suraksha Logo" style={{ width: '80px', height: '80px', objectFit: 'contain' }} />
+              <img className="brand-logo" src={darkMode ? "/darkmode-suraksha-logo-2.0.jpg" : "/suraksha_logo.jpeg"} alt="Suraksha Logo" />
             </span>
             <div>
               <span className="name">Suraksha</span>

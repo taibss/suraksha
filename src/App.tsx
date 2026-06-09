@@ -92,20 +92,22 @@ const App: React.FC = () => {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       opacity: darkMode ? '0.04' : '0.06',
-      zIndex: 0,
+      zIndex: 1,
       pointerEvents: 'none',
     }} />
       {!showLogo && (
         <>
-          {showAlert && <Alert onClose={handleCloseAlert} />}
-        <Header
-  currentLang={currentLang}
-  onLanguageChange={handleLanguageChange}
-  onNavigate={handleNavigate}
-  currentPage=""
-  darkMode={darkMode}
-  onToggleDark={() => setDarkMode(!darkMode)}
-/>
+          <div className="app-chrome">
+            {showAlert && <Alert onClose={handleCloseAlert} />}
+            <Header
+              currentLang={currentLang}
+              onLanguageChange={handleLanguageChange}
+              onNavigate={handleNavigate}
+              currentPage=""
+              darkMode={darkMode}
+              onToggleDark={() => setDarkMode(!darkMode)}
+            />
+          </div>
         <main>
   <Routes>
     <Route path="/" element={<><Hero onNavigate={handleNavigate}/><Stats /><Doorways onNavigate={handleNavigate} /><Protection /><ScamOfTheWeek onNavigate={handleNavigate} /><HallOfShame crooks={CROOKS} /><Reassurance /><Band247 /><Testimonials testimonials={TESTIMONIALS} /><SpreadWord onNavigate={handleNavigate} /></>} />
